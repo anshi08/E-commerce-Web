@@ -108,11 +108,11 @@ const quickList = [
 const tweetList = [
     {
         iconName: 'icofont-twitter',
-        desc: <p>Aminur islam <a href="#">@ShopCart Greetings!  #Lorem_Ipsum</a> Grab your item, 50% Big Sale Offer !!</p>,
+        desc: <p>Natasha <a href="#">@ShopCart Greetings!  #Lorem_Ipsum</a> Grab your item, 50% Big Sale Offer !!</p>,
     },
     {
         iconName: 'icofont-twitter',
-        desc: <p>Somrat islam <a href="#">@ShopCart Hey! #Lorem_Ipsum</a> Grab your item, 50% Big Sale Offer !!</p>,
+        desc: <p>Chirs Evans <a href="#">@ShopCart Hey! #Lorem_Ipsum</a> Grab your item, 50% Big Sale Offer !!</p>,
     },
 ]
 
