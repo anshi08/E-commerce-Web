@@ -1,6 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import Img1 from "../assets/images/category/01.jpg"
+import Img2 from "../assets/images/category/02.jpg"
+import Img3 from "../assets/images/category/03.jpg"
+import Img4 from "../assets/images/category/04.jpg"
+import Img5 from "../assets/images/category/05.jpg"
+import Img6 from "../assets/images/category/06.jpg"
 
 
 const subTitle = "Choose Any Products";
@@ -9,37 +15,37 @@ const btnText = "Get Started Now";
 
 const categoryList = [
     {
-        imgUrl: 'src/assets/images/category/01.jpg',
+        imgUrl: Img1,
         imgAlt: 'category rajibraj91 rajibraj',
         iconName: 'icofont-brand-windows',
         title: 'DSLR Camera',
     },
     {
-        imgUrl: 'src/assets/images/category/02.jpg',
+        imgUrl: Img2,
         imgAlt: 'category rajibraj91 rajibraj',
         iconName: 'icofont-brand-windows',
         title: 'Shoes',
     },
     {
-        imgUrl: 'src/assets/images/category/03.jpg',
+        imgUrl: Img3,
         imgAlt: 'category rajibraj91 rajibraj',
         iconName: 'icofont-brand-windows',
         title: 'Photography',
     },
     {
-        imgUrl: 'src/assets/images/category/04.jpg',
+        imgUrl: Img4,
         imgAlt: 'category rajibraj91 rajibraj',
         iconName: 'icofont-brand-windows',
         title: 'Formal Dress',
     },
     {
-        imgUrl: 'src/assets/images/category/05.jpg',
+        imgUrl: Img5,
         imgAlt: 'category rajibraj91 rajibraj',
         iconName: 'icofont-brand-windows',
         title: 'Colorful Bags',
     },
     {
-        imgUrl: 'src/assets/images/category/06.jpg',
+        imgUrl: Img6,
         imgAlt: 'category rajibraj91 rajibraj',
         iconName: 'icofont-brand-windows',
         title: 'Home Decor',
