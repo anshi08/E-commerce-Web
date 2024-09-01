@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const title = "About ShopCart";
 const desc = "Eduaid theme number one world class university in the world There are student are studing always in this university for all time.";
@@ -107,11 +108,11 @@ const quickList = [
 const tweetList = [
     {
         iconName: 'icofont-twitter',
-        desc: <p>Aminur islam <a href="#">@ShopCart Greetings!  #HTML_Template</a> Grab your item, 50% Big Sale Offer !!</p>,
+        desc: <p>Aminur islam <a href="#">@ShopCart Greetings!  #Lorem_Ipsum</a> Grab your item, 50% Big Sale Offer !!</p>,
     },
     {
         iconName: 'icofont-twitter',
-        desc: <p>Somrat islam <a href="#">@ShopCart Hey! #HTML_Template</a> Grab your item, 50% Big Sale Offer !!</p>,
+        desc: <p>Somrat islam <a href="#">@ShopCart Hey! #Lorem_Ipsum</a> Grab your item, 50% Big Sale Offer !!</p>,
     },
 ]
 
@@ -139,6 +140,19 @@ const Footer = () => {
         <>
             <footer className='style-2'>
                 <div className='footer-top dark-view padding-tb'>
+                <motion.div
+                    initial={{
+                      opacity: 0,
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      // y: 0,
+                      transition: {
+                        duration: 2,
+                      },
+                    }}
+                    viewport={{ once: true }}
+                  >
                     <div className="container">
                         <div className="row g-4 row-cols-xl-4 row-cols-sm-2 row-cols-1 justify-content-center">
                             <div className="col">
@@ -253,6 +267,8 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
+</motion.div>
+
                 </div>
 
                 {/* footer bottom */}

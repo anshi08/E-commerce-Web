@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 
 const subTitle = "Choose Any Products";
@@ -53,8 +54,39 @@ const HomeCategory = () => {
             <div className='category-section style-4 padding-tb'>
                 <div className='container'>
                     <div className='section-header text-center'>
-                        <span className='subtitle'>{subTitle}</span>
-                        <h2>{title}</h2>
+                        <motion.div
+                            initial={{
+                                opacity: 0,
+                                y: 100,
+                            }}
+                            whileInView={{
+                                opacity: 1,
+                                y: 0,
+                                transition: {
+                                    duration: 1,
+                                },
+                            }}
+                            viewport={{ once: true }}
+                        >
+                            <span className='subtitle'>{subTitle}</span>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{
+                                opacity: 0,
+                                y: 100,
+                            }}
+                            whileInView={{
+                                opacity: 1,
+                                y: 0,
+                                transition: {
+                                    duration: 1,
+                                },
+                            }}
+                            viewport={{ once: true }}
+                        >
+                            <h2>{title}</h2>
+                        </motion.div>
                     </div>
 
                     {/*section card */}
@@ -66,13 +98,27 @@ const HomeCategory = () => {
                                         <Link to="/" className="category-item">
                                             <div className='category-inner'>
                                                 <div className='category-thumb'>
-                                                    <img src={val.imgUrl} />
+                                                    <motion.div
+                                                        initial={{
+                                                            opacity: 0,
+                                                        }}
+                                                        whileInView={{
+                                                            opacity: 1,
+                                                            // y: 0,
+                                                            transition: {
+                                                                duration: 2,
+                                                            },
+                                                        }}
+                                                        viewport={{ once: true }}
+                                                    >
+                                                        <img src={val.imgUrl} />
+                                                    </motion.div>
                                                 </div>
 
                                                 {/* content */}
                                                 <div className='category-content'>
                                                     <div className='cate-icon'>
-                                                      <i className={`${val.iconName}`}></i>
+                                                        <i className={`${val.iconName}`}></i>
                                                     </div>
                                                     <Link><h6>{val.title}</h6></Link>
                                                 </div>
@@ -85,7 +131,22 @@ const HomeCategory = () => {
                         </div>
 
                         <div className='text-center mt-5'>
-                            <Link className='lab-btn'><span>{btnText}</span></Link>
+                            <motion.div
+                                initial={{
+                                    opacity: 0,
+                                    y: 100,
+                                }}
+                                whileInView={{
+                                    opacity: 1,
+                                    y: 0,
+                                    transition: {
+                                        duration: 1,
+                                    },
+                                }}
+                                viewport={{ once: true }}
+                            >
+                                <Link className='lab-btn'><span>{btnText}</span></Link>
+                            </motion.div>
                         </div>
                     </div>
                 </div>

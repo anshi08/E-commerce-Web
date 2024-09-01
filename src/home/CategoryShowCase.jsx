@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Rating from '../components/Rating';
 import { Link } from 'react-router-dom';
+import { motion } from "framer-motion"
 
 
 const title = "Our Products";
@@ -106,15 +107,45 @@ const CategoryShowCase = () => {
                 {/* main section */}
                 <div className='container'>
                     <div className='section-header'>
-                        <h2 className='title'>{title}</h2>
+                        <motion.div
+                            initial={{
+                                opacity: 0,
+                                y: 50,
+                            }}
+                            whileInView={{
+                                opacity: 1,
+                                y: 0,
+                                transition: {
+                                    duration: 1,
+                                },
+                            }}
+                            viewport={{ once: true }}
+                        >
+                            <h2 className='title'>{title}</h2>
+                        </motion.div>
                         <div className='course-filter-group'>
-                            <ul className='lab-ul'>
-                                <li onClick={() => setItems(ProductData)}>All</li>
-                                <li onClick={() => filterItem("Shoes")}>Shoes</li>
-                                <li onClick={() => filterItem("Bags")}>Bags</li>
-                                <li onClick={() => filterItem("Phones")}>Phones</li>
-                                <li onClick={() => filterItem("Beauty")}>Beauty</li>
-                            </ul>
+                            <motion.div
+                                initial={{
+                                    opacity: 0,
+                                    y: 50,
+                                }}
+                                whileInView={{
+                                    opacity: 1,
+                                    y: 0,
+                                    transition: {
+                                        duration: 1,
+                                    },
+                                }}
+                                viewport={{ once: true }}
+                            >
+                                <ul className='lab-ul'>
+                                    <li onClick={() => setItems(ProductData)}>All</li>
+                                    <li onClick={() => filterItem("Shoes")}>Shoes</li>
+                                    <li onClick={() => filterItem("Bags")}>Bags</li>
+                                    <li onClick={() => filterItem("Phones")}>Phones</li>
+                                    <li onClick={() => filterItem("Beauty")}>Beauty</li>
+                                </ul>
+                            </motion.div>
                         </div>
 
 
@@ -127,36 +158,51 @@ const CategoryShowCase = () => {
                             {
                                 items.map((ele) => <div key={ele.id} className='col'>
                                     <div className='course-item style-4'>
-                                        <div className='course-inner'>
-                                           <div className='course-thumb'>
-                                              <img src={ele.imgUrl} />
-                                              <div className='course-category'>
-                                                <div className='course-cate'>
-                                                    <a href='#'>{ele.cate}</a>
+                                        <motion.div
+                                            initial={{
+                                                opacity: 0,
+                                                y: 60,
+                                            }}
+                                            whileInView={{
+                                                opacity: 1,
+                                                y: 0,
+                                                transition: {
+                                                    duration: 1,
+                                                },
+                                            }}
+                                            viewport={{ once: true }}
+                                        >
+                                            <div className='course-inner'>
+                                                <div className='course-thumb'>
+                                                    <img src={ele.imgUrl} />
+                                                    <div className='course-category'>
+                                                        <div className='course-cate'>
+                                                            <a href='#'>{ele.cate}</a>
+                                                        </div>
+
+                                                        <div className='course-reiew'>
+                                                            <Rating />
+                                                        </div>
+                                                    </div>
                                                 </div>
 
-                                                <div className='course-reiew'>
-                                                    <Rating />
+                                                {/* content */}
+                                                <div className='course-content'>
+                                                    <Link to={"/"}><h6>{ele.title}</h6></Link>
+
+                                                    <div className='course-footer'>
+                                                        <div className='course-author'>
+                                                            <Link to={"/"}>{ele.brand}</Link>
+                                                        </div>
+
+                                                        <div className='course-price'>
+                                                            {ele.price}
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                              </div>
-                                           </div>
+                                            </div>
 
-                                           {/* content */}
-                                           <div className='course-content'>
-                                              <Link to={"/"}><h6>{ele.title}</h6></Link>
-
-                                              <div className='course-footer'>
-                                                <div className='course-author'>
-                                                 <Link to={"/"}>{ele.brand}</Link>
-                                                 </div>
-
-                                                 <div className='course-price'>
-                                                    {ele.price}
-                                                 </div>
-                                              </div>
-                                           </div>
-                                        </div>
-
+                                        </motion.div>
                                     </div>
                                 </div>)
                             }
