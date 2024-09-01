@@ -3,25 +3,31 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css'
 import 'swiper/css/pagination'
 import { Autoplay, Pagination } from 'swiper/modules';
+import Sp1 from "../assets/images/sponsor/01.png"
+import Sp2 from "../assets/images/sponsor/02.png"
+import Sp3 from "../assets/images/sponsor/03.png"
+import Sp4 from "../assets/images/sponsor/04.png"
+import Sp5 from "../assets/images/sponsor/05.png"
+import Sp6 from "../assets/images/sponsor/06.png"
 
 const sponsorList = [
     {
-    imgUrl: "/src/assets/images/sponsor/01.png",
+    imgUrl: Sp1,
     },
     {
-    imgUrl: "/src/assets/images/sponsor/02.png",
+    imgUrl: Sp2,
     },
     {
-    imgUrl: "/src/assets/images/sponsor/03.png",
+    imgUrl: Sp3,
     },
     {
-    imgUrl: "/src/assets/images/sponsor/04.png",
+    imgUrl: Sp4,
     },
     {
-    imgUrl: "/src/assets/images/sponsor/05.png",
+    imgUrl: Sp5,
     },
     {
-    imgUrl: "/src/assets/images/sponsor/06.png",
+    imgUrl: Sp6,
     },
     ];
 
